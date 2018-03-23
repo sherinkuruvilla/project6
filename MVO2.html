@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="css/MVO2.css">
+    </head>
+<body>
+
+<div class="cat-wrapper">
+
+    <div id = "cat-list" class="cat-list box"> Cat Listing
+    </div>
+
+    <div id = "cat-display" class="cat-display box"> Cat Display
+
+        <div id="cat-frame" class="cat-frame">
+            <p id="cat-frame-name" class="cat-frame-name">xxxx</p>
+            <span id="click-counter" class="click-counter">.</span>
+            <img id="cat-image" class="cat-image" src="img/kitten0.png">
+        </div>
+
+        <div id="admin-anchor">
+            <input id="admin-btn" type="button" value="Admin"><br>
+            <div id="admin" class="box">
+                <form id="admin-form">
+                <label value="Cat Name:"><input id="cat-name-input" value=""><br>
+                <label value="Img Src:"><input id="cat-image-input" value=""><br>
+                <label value="Click Count:"><input id="click-counter-input" value=""><br>
+                <input id="cancel-btn" type="button" value="Cancel">
+                <input id="submit-btn" type="button" value="Save">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/MVO2.js"></script>
+
+</body>
+</html>

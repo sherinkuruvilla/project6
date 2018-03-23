@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker KO</title>
+    <link rel="stylesheet" href="css/KO.css">
+    </head>
+<body>
+
+<div class="cat-wrapper">
+
+    <div class="cat-list box"> Cat Listing
+    </div>
+
+    <div class="cat-display box"> Cat Display
+
+        <div class="cat-frame">
+            <p class="cat-frame-name" data-bind="text: upperName">cat name placeholder</p>
+            <p class="level"  data-bind="text: level">no level</p>
+            <span class="click-counter" data-bind="text: clickCount">-1</span>
+            <img class="cat-image" src="" alt="cute cat" data-bind="attr: {src: imgSrc}, click:incrementCounter">
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="js/libs/knockout-3.4.2.js"></script>
+    <script src="js/KO.js"></script>
+
+</body>
+</html>

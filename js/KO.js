@@ -1,12 +1,10 @@
-var viewCatModel = function(){
+var Cat = function(){
     this.clickCount=ko.observable(0);
     this.name=ko.observable('lola');
     this.imgSrc=ko.observable('img/kitten1.jpg');
-    this.nicknames=['Mr.T','cutiepie','funky monkey','popo'];
+    this.nicknames=ko.observableArray([{name:'Mr.T'},{name:'cutiepie'},{name:'funky monkey',},{name:'popo'}]);
+    //this.nicknams=ko.observableArray(['Mr.T','cutiepied','funky monkey','popo']); //$data
 
-    incrementCounter=function(){
-        this.clickCount(this.clickCount() + 1);
-    };
 
     this.upperName=ko.computed(function(){
         return this.name().toUpperCase();
@@ -21,7 +19,17 @@ var viewCatModel = function(){
             return 'Adult';
         };
     }, this);
+
 };
+
+var viewCatModel = function(){
+    this.currentCat=ko.observable(new Cat());
+    incrementCounter=function(){
+        this.currentCat().clickCount(this.currentCat().clickCount() + 1);
+    };
+};
+
+
 
 ko.applyBindings(new viewCatModel());
 

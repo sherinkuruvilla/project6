@@ -15,18 +15,21 @@
     <div class="cat-display box"> Cat Display
 
         <div class="cat-frame">
-            <p class="cat-frame-name" data-bind="text: upperName">cat name placeholder</p>
-            <p class="level"  data-bind="text: level">no level</p>
-            <span class="click-counter" data-bind="text: clickCount">-1</span>
-            <img class="cat-image" src="" alt="cute cat" data-bind="attr: {src: imgSrc}, click:incrementCounter">
+            <p class="cat-frame-name" data-bind="text: currentCat().upperName">cat name placeholder</p>
+            <p class="level"  data-bind="text: currentCat().level">no level</p>
+            <span class="click-counter" data-bind="text: currentCat().clickCount">-1</span>
+            <img class="cat-image" src="" alt="cute cat" data-bind="attr: {src:currentCat().imgSrc}, click: incrementCounter">
         </div>
-
     </div>
-
+    <div>
+        <ul data-bind="foreach: currentCat().nicknames">
+            <li data-bind="text: name"></li>
+        </ul>
+    </div>
 </div>
 
 
-    <script src="js/libs/knockout-3.4.2.js"></script>
+    <script src="js/libs/knockout-3.2.0.js"></script>
     <script src="js/KO.js"></script>
 
 </body>

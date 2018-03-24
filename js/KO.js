@@ -29,7 +29,7 @@ var viewCatModel = function(){
     };
 };
 
-
+////
 
 ko.applyBindings(new viewCatModel());
 
